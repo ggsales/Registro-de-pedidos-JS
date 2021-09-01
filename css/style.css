@@ -1,3 +1,8 @@
+/*body{
+  overflow: hidden;
+}
+*/
+
 .home{
   right: 0;
   bottom: 0;
@@ -8,16 +13,18 @@
   background-position: center;
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -90px;
+  margin-top: -80px;
 }
+
 .container-fluid{
-  height: 120vh;
+  height: 113vh;
 }
+
 .overlay-70{
   background-color: rgba(51, 51, 51, 0.7);
   width: 100%;
   height: 100%;
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
 }
@@ -26,7 +33,6 @@
     font-size: 55px;
     text-shadow: -8px 29px 19px #000000;
     letter-spacing: -4px;
-    color:rgb(201, 152, 18);
     position: relative;
     top: 50vh;  
 }
@@ -37,7 +43,7 @@
   align-items: center;
 }
 
-.btn{
+.btn-home{
   z-index: 1;
   position: relative;
   top: 55vh;
@@ -52,7 +58,7 @@
   transform: translate(-50%,-50%);
   position: relative;
   top: 70vh;
-  right: 90px;
+  right: 115px;
 }
 .arrow span{
   display: block;
@@ -84,3 +90,131 @@
       transform: rotate(45deg) translate(20px,20px);
   }
 }
+
+.user-infos{
+  position: relative;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);  
+  width: 100%;
+  height: 120vh;
+}
+.title-user-infos p{
+  padding-top: 10vh;
+  font-family: 'Rochester', cursive;
+}
+
+form{
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.input-name-user, .form-select {
+  width: 45%;
+  border-radius: 20px;
+}
+.input-name-user input{
+  border-radius: 20px;
+}
+  
+
+.btn-user-infos{
+  border-radius: 55px;
+  font-family: 'Rouge Script', cursive;
+  font-size: 30px;
+  color: black;
+  box-shadow: -1px 10px 25px #000000;;
+}
+
+
+/* cardapio style /////////////// */
+
+.cardapio-area{
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);  
+  width: 100%;
+  height: 180vh;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -100px;
+}
+.title-section-cardapio{
+  position: relative;
+  font-family: 'Rochester', cursive;
+  font-size: 55px;
+  text-decoration: underline;
+  letter-spacing: -4px;
+  color: red;
+}
+.flex-titles p {
+  font-family: 'Rochester', cursive;
+  font-size: 35px;
+  letter-spacing: -3px;
+  color: red;
+}
+.img-thumbnail{
+  width: 100%;
+  height: 10vh;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+.left-content, .right-content{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+  width: 100%;
+  height: 90vh;
+}
+.box-cardapio{
+  position: relative;
+  top: 20vh;
+  width: 90%;
+  height: 150vh;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.flex-contents{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-titles{
+  display: flex;
+  justify-content: space-around;
+}
+
+.total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-total{
+  margin-top: 60px;
+  width: 50%;
+  height: 20vh;
+  background-color: white;
+  box-shadow:5px 19px 39px #000000;;
+  border-radius: 20px;
+  overflow-y:scroll;
+}
+
+

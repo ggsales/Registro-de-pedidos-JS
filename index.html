@@ -12,40 +12,225 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
     <link rel='stylesheet' href="./css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.css">
+    <title>Desafio Front-end Devio</title>
 </head>
 <body>
-    <section class="home container-fluid" style="background-image:url('img/bg-principal.jpg')">
+    <section class="home container-fluid scrol-hidden" style="background-image:url('img/bg-principal.jpg')">
           <div class="overlay-70"></div>
           <div class="row">
               <div class="col-sm-4">
               </div>
               <div class="col-sm-4">
-                <p class="text-center text">Que ótimo ter você por aqui!</p>
+                <p class="text-center text-warning text">Que ótimo ter você por aqui!</p>
               </div>
               <div class="col-sm-4"></div>
               <div class="btn-position">
-                <button class="btn btn-primary  btn-warning" type="button">Começar pedido?</button>
+                <button class="btn btn-primary  btn-warning btn-home" type="button" onclick="scrollWin()">Deseja iniciar o pedido?</button>
                 <div class="arrow">
                   <span></span>
                   <span></span>
                   <span></span>
+                </div>
               </div>
-              </div>
-          
           </div>
     </section>
-   
-     
+    
+    <section class="user-infos container-fluid">
+        <div class="title-user-infos">
+          <p class="text-center fs-2">Pensando sempre no seu bem estar, simplificamos a forma de realização de seus pedidos!</p>
+          <p class="text-center fs-4">Para começar:</p>
+        </div>
+      <form>
+          <div class="form-group input-name-user mb-3">
+            <input type="text" class="form-control" placeholder="Insira seu nome">
+          </div>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Informe sua mesa...</option>
+            <option value="1">Mesa 1</option>
+            <option value="2">Mesa 2</option>
+            <option value="3">Mesa 3</option>
+            <option value="3">Mesa 4</option>
+            <option value="3">Mesa 5</option>
+        </select>
+        <div class="form-group form-check mb-3"></div>
+        <button type="button" class="btn btn-warning btn-user-infos" onclick="scrollWin()">Ir ao Cardápio</button>
+      </form>
+    </section>
+    <section class="cardapio-area container-fluid" style="background-image:url('img/fundo-cardapio.jpg')">
+          <div class="box-cardapio container">
+              <p class="text-center title-section-cardapio">Cardápio</p>
+              <div class="flex-titles">
+                <p class="text-center">Comidas</p>
+                <p class="text-center">Bebidas</p>
+              </div>
+              <div class="flex-contents">
+                <div class="left-content">
+
+                  <table id="table-id"class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nome do Prato</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Apresentação</th>
+                        <th scope="col">add na lista do pedido</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Linguiça Acebolada</td>
+                        <td>R$25,00</td>
+                        <td><img src="https://www.perdigao.com.br/assets/_images/12b67f4a58c182561573b98f44400c8068469475.jpg" class="img-thumbnail" alt=""></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Strogonoff de Frango</td>
+                        <td>R$45,00</td>
+                        <td><img src="https://www.sumerbol.com.br/uploads/images/2019/01/strogonoff-de-frango-1548843823.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Bife a parmegiana</td>
+                        <td>R$40,00</td>
+                        <td><img src="https://www.receitasdemae.com.br/wp-content/uploads/2008/06/Bife-a-parmigiana-380x253.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Espaguete a carbonara</td>
+                        <td>R$70,00</td>
+                        <td><img src="https://ginnolarry.com.br/wp-content/uploads/2020/03/unnamed-8.png" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Porção de Camarão</td>
+                        <td>R$50,00</td>
+                        <td><img src="https://uploads.metropoles.com/wp-content/uploads/2021/03/11210621/Camaroes-Maria-Labanda-Unsplahs-600x400.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>Hambúrguer artesanal</td>
+                        <td>R$25,00</td>
+                        <td><img src="https://www.sabornamesa.com.br/media/k2/items/cache/b9ad772005653afce4d4bd46c2efe842_XL.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>Porção de fritas</td>
+                        <td>R$35,00</td>
+                        <td><img src="https://images2.cosmopolense.com.br/wp-content/uploads/2019/06/2k9a9057-1559842148.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                 
+                    </tbody>
+                  </table>
+
+                  
+                </div>
+                <div class="right-content">
+                  <table id="table-id" class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nome do Prato</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Apresentação</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Coca Cola 1L</td>
+                        <td>R$15,00</td>
+                        <td><img src="https://miro.medium.com/max/3000/1*jwlW3Vl20qipT_Ucl6LfKQ.jpeg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Suco de maracujá natural</td>
+                        <td>R$10,00</td>
+                        <td><img src="https://www.kobacafe.com.br/uploads/cardapio/1448626079_Kobacafe_19.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Suco natural de Morango</td>
+                        <td>R$10,00</td>
+                        <td><img src="https://static.tuasaude.com/media/article/ci/qv/suco-de-morango-para-emagrecer_14020_l.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Suco natural de Limão</td>
+                        <td>R$8,00</td>
+                        <td><img src="https://www.mundoboaforma.com.br/wp-content/uploads/2017/08/suco-de-limao.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Coquetel de frutas com vodka e leite condesado</td>
+                        <td>R$50,00</td>
+                        <td><img src="https://t2.rg.ltmcdn.com/pt/images/1/5/4/coquetel_de_frutas_com_vodka_e_leite_condensado_5451_orig.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>Caipirinha</td>
+                        <td>R$15,00</td>
+                        <td><img src="https://img.itdg.com.br/images/recipes/000/128/825/319875/319875_original.jpg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>Torre de chopp</td>
+                        <td>R$65,00</td>
+                        <td><img src="https://s3.amazonaws.com/frigo.smserver.com.br/img/products/torre-de-chopp-35-litros-tulipa-marchesoni-1057-primary.jpeg" alt="..." class="img-thumbnail"></td>
+                        <td><button>+</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
 
 
-   
+                </div>
+              </div>
+              <div class="total mb-3">
+                <div class="box-total">
+                  total
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success">Fechar seu pedido</button>
+              </div>
+          </div>
+    </section>
 
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+      <script>
+        function scrollWin() {
+          window.scrollBy(0, 680);
+        }
+      </script>
+    
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+      <script>
+          $(document).ready(function() {
+            $('#table-id').DataTable( {
+                "language": {
+                    "url": "https://raw.githubusercontent.com/DataTables/Plugins/master/i18n/pt_br.json"
+                }
+            } );
+        } );
+      </script>
+    
 </body>
 </html>
 
