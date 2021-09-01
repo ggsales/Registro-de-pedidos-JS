@@ -3,6 +3,8 @@
 }
 */
 
+/* Section home -----------------*/
+
 .home{
   right: 0;
   bottom: 0;
@@ -91,7 +93,13 @@
   }
 }
 
-.user-infos{
+/*  final da Section home -------
+-------------------------------------------*/
+
+
+/*!!!!!      Section form user!!!! -----------------*/
+
+.form-user{
   position: relative;
   background-color: #FBAB7E;
   background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);  
@@ -129,8 +137,11 @@ form{
   box-shadow: -1px 10px 25px #000000;;
 }
 
+/*  final da Section home -------
+-------------------------------------------*/
 
-/* cardapio style /////////////// */
+
+/* !!!!!!!  Section do cardapio !!!!! */
 
 .cardapio-area{
   background-color: #FBAB7E;
@@ -187,7 +198,7 @@ form{
 .box-cardapio{
   position: relative;
   top: 20vh;
-  width: 90%;
+  width: 100%;
   height: 150vh;
   background-color: white;
   border-radius: 15px;
@@ -217,4 +228,46 @@ form{
   overflow-y:scroll;
 }
 
+/* !!!!!!! fim da Section do cardapio !!!!! */
 
+
+
+/* !!!!!!!  Media query !!!!! */
+
+@media (min-width: 300px) and (max-width:980px){
+  .cardapio-area{
+    height: 300vh;
+  }
+  .box-cardapio{
+    height: 300vh;
+  }
+  .left-content{
+    width: 90%;
+    position: absolute;
+    
+  }
+  .right-content{
+    position: relative;
+    top: 105vh;
+  }
+  .text-left-mobile-position{
+    position: relative;
+    left: 25%;
+  }
+  .text-right-mobile-position{
+    position: relative;
+    top: 100vh;
+    right: 25%;
+    z-index: 1;
+    font-size: 30px;
+  }
+  .box-total{
+    position: absolute;
+    top: 220vh;
+    width: 90%;
+  }
+  .btn-mobile-position{
+    position: absolute;
+    top: 250vh;
+  }
+}
