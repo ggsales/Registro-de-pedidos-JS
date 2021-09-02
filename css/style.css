@@ -1,7 +1,9 @@
-/*body{
-  overflow: hidden;
+.lista-pedidos{
+  list-style:none;
+  text-align: center;
+
 }
-*/
+
 
 /* Section home -----------------*/
 
@@ -199,7 +201,7 @@ form{
   position: relative;
   top: 20vh;
   width: 100%;
-  height: 150vh;
+  height: 170vh;
   background-color: white;
   border-radius: 15px;
 }
@@ -213,26 +215,117 @@ form{
   justify-content: space-around;
 }
 
+.info-client-box{
+  margin-top: 10px;
+  width: 20%;
+  height: 5vh;
+  background-color: rgba(216, 216, 216, 0.911);
+  border-radius: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
 .total{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.box-total{
-  margin-top: 60px;
+.box-lista-de-pedidos{
+  margin-top: 30px;
   width: 50%;
   height: 20vh;
-  background-color: white;
-  box-shadow:5px 19px 39px #000000;;
+  background-color: rgba(216, 216, 216, 0.911);
   border-radius: 20px;
   overflow-y:scroll;
 }
+
+#soma-box{
+  background-color:#fff;
+  width: 30%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+#soma-box h3{
+  font-size:  15px;
+  margin-top: 3px;  
+}
+  
+
+/*----------------------- section pedidos ---------------- */ 
+#pedidos{
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);  
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+.p-pedidos{
+  font-size: 50px;
+  color: #000000;
+  font-family: 'Rochester';
+}
+
+.ring-container {
+  position: relative;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: #62bd19;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  left: 121vh;
+}
+
+.ringring {
+  border: 3px solid #62bd19;
+  border-radius: 30px;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: 120vh;
+  top: 30px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite; 
+  opacity: 0.0
+}
+@keyframes pulsate {
+  0% {-webkit-transform: scale(0.3, 0.1); opacity: 0.0;}
+  50% {opacity: 1.0;}
+  100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
 
 /* !!!!!!! fim da Section do cardapio !!!!! */
 
 
 
 /* !!!!!!!  Media query !!!!! */
+@media (max-width: 280px){
+  .circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 37px;
+    left: 34vh;
+  }
+  
+  .ringring {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 33vh;
+    top: 30px;
+  }
+
+}
 
 @media (min-width: 300px) and (max-width:980px){
   .cardapio-area{
@@ -261,13 +354,107 @@ form{
     z-index: 1;
     font-size: 30px;
   }
-  .box-total{
+  .info-client-box{
     position: absolute;
     top: 220vh;
+    width: 35%;
+  }
+  .box-lista-de-pedidos{
+    position: absolute;
+    top: 223vh;
     width: 90%;
   }
-  .btn-mobile-position{
+  #soma-box{
     position: absolute;
-    top: 250vh;
+    top: 266vh;
+
+  }
+  .btn-mobile-position-1{
+    position: absolute;
+    top: 255vh;
+    height: 40px;
+  }
+  .btn-mobile-position-2{
+    position: absolute;
+    top: 270vh;
+  }
+
+ 
+
+  /* SECTION PEDIDOS Media query----------------- */
+  #pedidos{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);  
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+  }
+  .p-pedidos{
+    font-size: 50px;
+    color: #000000;
+    font-family: 'Rochester';
+  }
+  
+  .ring-container {
+    position: relative;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 37px;
+    left: 41vh;
+  }
+  
+  .ringring {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 40vh;
+    top: 30px;
+  }
+  #data-client{
+    position: absolute;
+    top: 10vh;
+  }
+  #pending-orders{
+    position: absolute;
+    top: 15vh;
+  }
+  .soma-box-pedido{
+    position: relative;
+    bottom: 240vh;
+    
+  }
+}
+
+/*---------------------------------*/
+
+@media (min-width: 767px){
+  .circle {
+    top: 37px;
+    left: 46vh;
+  }
+  
+  .ringring {
+    left: 45vh;
+    top: 30px;
+  }
+  .soma-box-pedido{
+    bottom: 235vh;
+  }
+  .info-client-box{
+    top: 215vh;
+  }
+}
+
+@media (min-width: 800px){
+  .circle{
+    left: 85vh;
+  }
+  .ringring{
+    left: 84vh;
   }
 }
