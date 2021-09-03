@@ -3,10 +3,9 @@
     function adicionaCliente(){
         let nomeCliente =  document.getElementById("nomeCliente").value
         let mesaCliente = Number(document.getElementById("inputGroupSelect01").value);
-        console.log(mesaCliente, nomeCliente)
 
         if(nomeCliente == "" || mesaCliente == ""){
-            alert("Preencha todos os campos para seguir ao cárdapio")
+            alert("Preencha todos os campos para seguir ao cardápio")
             return;
         } else{
             scrollWin2()
