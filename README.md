@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Desafio Front-end-devio</h2>
+<h1>Registro de Pedidos</h2>
 </div>  
 <p> O desafio proposto era facilitar as vendas de um restaurante, que por sua vez, tinha dificuldades com o uso de comandas de papel. 
  A aplicação é simples, mas é intuitiva e de fácil registro para os pedidos. <br>
