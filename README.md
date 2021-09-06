@@ -10,7 +10,10 @@
   5 - Nessa parte, existem 3 div's. A primeira informa o nome/mesa do cliente. A segunda vai permitir o acompanhamento do resumo do pedido, com o preço e o nome do produto. Já a terceira, traz o valor total de todos os produtos presentes. <br>
   6 - Existem 2 botões proximos dessas div's. O primeiro permite a limpeza total do pedido, caso seja de interesse do usúario, e a segunda registra todos os pedidos e retorna uma simulação de como apareceria essa "comanda digital" aos funcionários da cozinha.  
   
-https://user-images.githubusercontent.com/67559431/131929875-bc883544-9718-4a30-8a30-39af786db375.mp4
+
+https://user-images.githubusercontent.com/67559431/132262667-c8192859-26c9-4469-9d85-a3d083c869e3.mp4
+
+
 
 
  
